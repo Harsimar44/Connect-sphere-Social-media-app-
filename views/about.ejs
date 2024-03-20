@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us</title>
+  <style>
+    body, html {
+      height: 100%;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #f0f0f0;
+    }
+
+    .container {
+      position: relative;
+      display: flex;
+      align-items: center;
+      width: 80%;
+      height: 80%;
+    }
+
+    .video-container {
+      position: relative;
+      flex: 0 0 50%;
+      height: 100%;
+    }
+
+    .video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .content-container {
+      position: relative;
+      z-index: 2; /* Ensure content is above the video */
+      padding: 20px;
+      width: 50%;
+      height:100%;
+      text-align: left;
+      margin-left: -10%; /* Shift text to the left */
+    }
+
+    .about-heading {
+      font-size: 75px;
+      margin-bottom: 20px;
+      margin-top: 50px;
+    }
+
+    .about-content {
+      line-height: 1.6;
+      margin-left: 120px;
+      font-size: 15px;
+      margin-top: 50px;
+    }
+
+    .video-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 10%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity as needed */
+      z-index: 1;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <div class="video-container">
+    <div class="video-overlay"></div>
+    <!-- Embed your video here -->
+    <video class="video" controls>
+      <source src="C:\Users\HP\OneDrive\Desktop\InShot_20240119_050951518.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+  <div class="content-container">
+    <div class="about-heading">
+      About Us
+    </div>
+    <div class="about-content">
+      We are Connect Sphere, a social media app that provides you with a platform to express your emotions and thoughts freely. 
+      Whether it's sharing your daily experiences, thoughts on current events, or expressing your creativity, Connect Sphere 
+      offers a space where you can connect with others and share what's on your mind.
+      <Br><br>
+      At Connect Sphere, we understand the importance of privacy and security. That's why we prioritize protecting your data 
+      and ensuring a safe environment for all our users. Our advanced privacy settings allow you to control who sees your posts 
+      and interactions, giving you peace of mind while you express yourself online.
+
+     
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

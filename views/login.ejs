@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: url('https://images.tech.co/wp-content/uploads/2022/10/14123538/socialmedia-1-1024x512.jpg') center/cover no-repeat fixed;
+            backdrop-filter: blur(5px);
+        }
+
+        .login-container {
+            width: 50vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start; /* Moved more to the left */
+            margin-left: -200px; /* Shifted more to the left */
+        }
+
+        .form-container {
+            padding: 30px;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.5), 0 0 30px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0); /* Removed background color */
+            border: none; /* Removed border */
+        }
+
+        label {
+            display: block;
+            text-align: left;
+            margin-bottom: 5px;
+            color: #fff;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #fff;
+            border-radius: 4px;
+            box-sizing: border-box;
+            color: #333;
+        }
+
+        button {
+            background-color: #3498db;
+            color: #fff;
+            padding: 10px;
+            border: 1px solid #3498db;
+            border-radius: 4px;
+            cursor: pointer;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 400;
+            width: 100%;
+        }
+
+        .no-account {
+            margin-top: 20px;
+            color: #fff;
+        }
+
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="login-container">
+        <div class="form-container">
+            <h1 style="color: #fff;">Login</h1>
+            <form action="/login" method="post">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit">Login</button>
+            </form>
+            <div class="no-account">
+                <p>No account? <a href="/register">Register here</a>.</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

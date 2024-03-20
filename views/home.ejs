@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Marhey&display=swap');
+   
+  @import url('https://fonts.googleapis.com/css2?family=Moo+Lah+Lah&family=Sacramento&display=swap');
+
+  @import url('https://fonts.googleapis.com/css2?family=Moo+Lah+Lah&display=swap');
+
+    body {
+      font-family: 'Arial', sans-serif;
+      text-align: center;
+      background-color: white;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      min-height: 100vh; /* Set minimum height to full viewport height */
+    }
+
+    header {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      position: fixed;
+      top:20px;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    nav {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin-top: 10px;
+    }
+
+    .but, .button {
+      color: black; 
+      border: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 18px;
+      text-decoration: none;
+      display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    background-color: white;
+    margin-left: -20px;
+    }
+    .but span,.button span{
+      margin-right: 8px;
+      margin-bottom: -1px;
+      font-size: 23px;
+    }
+    .button-right {
+      margin-left: 20px;
+    }
+    ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: 0px;
+    left: -100px;
+    z-index: -1;
+}
+    li {
+      background-color: #fff;
+      border-radius: 8px;
+      margin: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      max-width: 450px;
+      width: 100%;
+      height: 700px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+
+    img {
+      width: 100%;
+      height: 75%;
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+    }
+
+    h2 {
+      font-weight: bold;
+      margin-left: 10px;
+      display:flex;
+      justify-content: flex-start;
+    }
+
+    p.date {
+      font-size: 12px;
+      font-style: italic;
+      color: grey;
+      align-self:center;
+      margin-left: 10px;
+      margin-top: 15px;
+    }
+
+
+    .vertical-line {
+      width: 1px;
+      height: 100vh;
+      position: fixed;
+      background-color: #ccc;
+      margin-left:200px;
+      top: 0;
+    }
+    .hd{
+      display: flex;
+      align-items: center;
+      font-family: 'Marhey', sans-serif;
+      margin-left: -20px;
+    }
+    .post-head{
+      display: flex;
+      flex-direction: row;
+    }
+    .user-name{
+      position: fixed;
+      
+      font-family: 'Moo Lah Lah', sans-serif;
+      font-family: 'Sacramento', cursive;
+
+      top:-12px;
+      left:80vw;
+      font-size: 40px;
+    }
+    .profile-img {
+    position: fixed;
+    top: 22px;
+    left: 76vw;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    }
+    .ico {
+    display: flex;
+    flex-direction: row;
+    width: 153px;
+    height: 70px;
+    justify-content: space-around;
+    align-items: center;
+}
+    .ico span{
+      font-size: 35px;
+    }
+    .bottom {
+      display: flex;
+      justify-content: space-evenly;
+      width:110px;
+    }
+    .bottom .user{
+      font-weight:bold;
+    }
+    .sugg{
+      position: fixed;
+    top: 77px;
+    left: 77vw;
+    }
+    .sugg-cont{
+      display: flex;
+     width:300px;
+     height: 50px;
+    }
+    .sugg-cont img{
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      margin-right: 10px;
+     box-shadow: 1px 1px 5px gray;
+    }
+    .sugg-cont h5{
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      width:200px;
+      margin-bottom: 40px;
+    }
+    .sugg-cont a{
+      text-decoration: none;
+      margin-top: 15px;
+      color:rgb(82, 179, 228);
+      font-size:15px;
+    }
+  .switch_p {
+    position: fixed;
+    left: 93vw;
+    top: 45px;
+    text-decoration: none;
+    font-size: 15px;
+}
+  </style>
+</head>
+<body>
+  <header>
+    <h2>
+      <div class="hd">
+        ConnectSphere
+      </div>
+    </h2>
+    <nav>
+      <!-- Home button -->
+      <a href="/" class="button" style="margin-top: 8px; margin-left: -20px;">
+        <span class="material-symbols-outlined">
+          home
+        </span>Home
+      </a>
+      
+      <!-- Create Post button -->
+      <form action="/posts/create" method="get" class="button"> 
+        <input type="hidden" id="username" name="username" value="<%= curruser %>">
+        <button type="submit" class="but">
+          <span class="material-symbols-outlined">
+            add_circle
+          </span>Create Post
+        </button> 
+      </form>
+      
+      <!-- Edit Post button -->
+      <form action="/posts/edit" method="get" class="button"> 
+        <input type="hidden" id="username" name="username" value="<%= curruser %>">
+        <button type="submit" class="but">
+          <span class="material-symbols-outlined">
+            edit
+          </span>Edit Post
+        </button> 
+      </form>
+  
+      <!-- About Us button -->
+      <a href="/about" class="button" style="margin-top: 8px; margin-left: -20px;">
+        <span class="material-symbols-outlined">
+          info
+        </span>About Us
+      </a>
+  
+      <!-- Contact Us button -->
+      <a href="/contact" class="button" style="margin-top: 8px; margin-left: -20px;">
+        <span class="material-symbols-outlined">
+          contact_support
+        </span>Contact Us
+      </a>
+  
+      <!-- Logout button -->
+      <a href="/logout" class="button" style="margin-top: 8px; margin-left: -20px;">
+        <span class="material-symbols-outlined">
+          logout
+        </span>Logout
+      </a>
+    </nav>
+  </header>
+  
+  <div class="vertical-line"></div>
+  <img src="https://media.istockphoto.com/id/1495088043/vector/user-profile-icon-avatar-or-person-icon-profile-picture-portrait-symbol-default-portrait.jpg?s=612x612&w=0&k=20&c=dhV2p1JwmloBTOaGAtaA3AW1KSnjsdMt7-U_3EZElZ0=" class="profile-img">
+  <p class="user-name"> <%= curruser %></p>
+   <a href="" class="switch_p">Switch</a>
+   <div class="sugg">
+    <h5 style="color: lightslategrey; display: flex; align-items: flex-start; ">Suggested for you</h4>
+    <div class="sugg-cont">
+     <img src="https://static.toiimg.com/photo/105936731.cms" alt="">
+      <h5> Virat Kohli</h5>
+     <a href="">Add</a>
+    </div>
+    <div class="sugg-cont">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOhkhcyGhEy-aNdlha5AHiznIUVT4gTzALYw&usqp=CAU">
+      <h5>Arijit Singh </h5>
+      <a href="">Add</a>
+    </div>
+    <div class="sugg-cont">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxsoysl9q4ejukufC18ARrdnQ9VAEbfk8DQA&usqp=CAU">
+      <h5> Selena Gomez</h5>
+      <a href="">Add</a>
+    </div>
+    <div class="sugg-cont">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrdacBwQYxwrXaXNurGU8nrfh2s50t1EcJDA&usqp=CAU">
+      <h5> Chitkara_confession</h5>
+      <a href="">Add</a>
+    </div>
+    <div class="sugg-cont">
+      <img src="data:image/png;base64,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">
+      <h5>chitkarauu </h5>
+      <a href="">Add</a>
+    </div>
+   </div>
+  <!-- Display all posts -->
+  <% if (posts.length > 0) { %>
+    <ul>
+      <% posts.reverse().forEach(post => { %>
+        <li>
+          <div class="post-head">
+          <h2><%= post.title %></h2>
+          <p class="date"><%= post.createdAt.toDateString() %></p></div>
+          <% if (post.image) { %>
+            <img src="<%= post.image %>" alt="Post Image">
+          <% } %>
+         <div class="ico"><span class="material-symbols-outlined">
+            favorite
+            </span>
+            <span class="material-symbols-outlined">
+              quick_phrases
+              </span>
+              <span class="material-symbols-outlined">
+                send
+                </span>
+              </div> 
+              <div class="bottom">
+          <p class="user"><%=post.title%></p>
+          <p class="content"><%= post.content %></p>
+        </div>
+    
+          <!-- Add edit and delete buttons if needed -->
+        </li>
+      <% }) %>
+    </ul>
+  
+  <% } else { %>
+    <p>No posts available.</p>
+  <% } %>
+  
+</body>
+</html>
